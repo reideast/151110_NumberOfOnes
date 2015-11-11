@@ -10,12 +10,11 @@ namespace NumberOfOnes
     {
         static void Main(string[] args)
         {
-            int start = 11, end = 111, count = 0, i, place, currNum;
-            for (i = (start < end ? start : end); i <= (start > end ? start : end); i++)
+            int start = 11, end = 111, count = 0, num, place, currNum;
+            for (num = (start < end ? start : end); num <= (start > end ? start : end); num++)
             {
                 //Console.WriteLine("i={0}", i);
-                currNum = i;
-                for (place = 10; currNum != 0; currNum /= 10, place *= 10)
+                for (place = 10, currNum = num; currNum != 0; currNum /= 10, place *= 10)
                 {
                     //Console.WriteLine("Place={0}, currNum%10={1}", place, currNum % 10);
                     if (currNum % 10 == 1)
